@@ -27,6 +27,10 @@ $(document).ready(function () {
 			clock.setCountdown(true);
 			isPaused = false;
 			clock.start();
+
+			// Hide setup UI
+			$('#setupArea').hide();
+			$('#controls').fadeIn();
 		} else {
 			alert("Please enter a valid time.");
 		}
@@ -45,13 +49,6 @@ $(document).ready(function () {
 
 	// Reset Button
 	$('#resetBtn').click(function () {
-		clock.stop();
-		clock.setTime(0);
-		isPaused = false;
-	});
-
-	// Theme Toggle
-	$('#themeSwitch').on('change', function () {
-		$('body').toggleClass('dark');
+		location.reload(); // Just reload the page to reset everything
 	});
 });
