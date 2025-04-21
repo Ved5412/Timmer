@@ -2,29 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>FlipClock Timer</title>
+	<title>Fullscreen FlipClock Timer</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipclock@0.7.8/compiled/flipclock.css">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body class="light">
 
-	<div class="theme-toggle">
-		<label class="switch">
-			<input type="checkbox" id="themeSwitch">
-			<span class="slider round"></span>
-		</label>
-	</div>
-
-	<div class="input-container">
+	<div class="input-container" id="setupArea">
 		<input type="number" id="minutes" placeholder="Minutes" min="0">
 		<input type="number" id="seconds" placeholder="Seconds" min="0" max="59">
 		<button id="startBtn">Start Timer</button>
 	</div>
 
-	<div class="clock" id="clock1"></div>
+	<div class="clock-wrapper" id="clockWrapper">
+		<div class="clock" id="clock1"></div>
+	</div>
 
-	<div class="control-buttons">
+	<div class="control-buttons" id="controls" style="display: none;">
 		<button id="pauseBtn" title="Pause"><i class="ri-pause-circle-line"></i></button>
 		<button id="resetBtn" title="Reset"><i class="ri-restart-line"></i></button>
 	</div>
